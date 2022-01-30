@@ -33,6 +33,7 @@ body {
 
 .navigation-list {
   line-height: 20px;
+  list-style: none;
 }
 
 .navigation-item a {
@@ -41,11 +42,30 @@ body {
   text-align: center;
 }
 
+.navigation-link:hover {
+  background: #FCFCFC;
+  opacity: 0.5;
+  border-radius: 26px;
+}
+
+.navigation-link:focus {
+  background: #FCFCFC;
+  opacity: 0.5;
+  border: 2px solid #2D3440;
+  border-radius: 26px;
+}
+
+.navigation-link:active {
+  background: #FCFCFC;
+  opacity: 1;
+  border: none;
+}
+
 .navigation-user .navigation-link {
   font-size: 14px;
 }
 
-.navigation .navigation-link-current {
+.navigation-item .navigation-link-current {
   background-color: #FF4A78;
 }
 
@@ -104,6 +124,26 @@ body {
   text-decoration: none;
 }
 
+.slider-pagination {
+  list-style: none;
+}
+
+.slider-pagination-button {
+  border: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.slider-pagination-button-current {
+  opacity: 1;
+}
+
+.social-media {
+  list-style: none;
+}
+
 .goods h2 {
   font-size: 32px;
   line-height: 46px;
@@ -115,13 +155,10 @@ body {
   background-color: #FF2F64;
 }
 
-.raspberry-bonus {
-  background-image: url("/images/raspberry.png");
+.card-list {
+  list-style: none;
 }
 
-.marshmallow-bonus {
-  background-image: url("/images/marshmallow.png");
-}
 .card {
   background-color: #FCFCFC;
 }
@@ -141,8 +178,8 @@ body {
 }
 
 .seo {
-  background-image: url("/images/waffle-background.png");
-  background-repeat: no-repeat;
+  background-image: url("/images/background-waffle.png");
+  background-repeat: repeat;
   padding: 24px;
 }
 
@@ -157,7 +194,7 @@ body {
 }
 
 .news {
-  background-image: url("/images/sorbet-background.jpg");
+  background-image: url("/images/background-sorbet.jpg");
   background-repeat: no-repeat;
 }
 
@@ -176,7 +213,7 @@ body {
 }
 
 .subscription {
-  background-image: url("/images/post-background.png");
+  background-image: url("/images/background-post.jpg");
   background-repeat: no-repeat;
   padding: 6px;
 }
@@ -191,7 +228,7 @@ body {
 }
 
 .delivery {
-  background-image: url("/images/delivery-background.jpg");
+  background-image: url("/images/background-delivery.jpg");
   background-repeat: no-repeat;
 }
 
@@ -202,7 +239,7 @@ body {
 }
 
 .feedback {
-  background-image: url("/images/feedback-background.jpg");
+  background-image: url("/images/background-feedback.jpg");
   background-repeat: no-repeat;
 }
 
@@ -239,10 +276,8 @@ body {
   background-color: #FCFCFC;
 }
 
-.social-media a {
-  text-decoration: none;
-  background-color: #FFFFFF;
-  color: #FEAFC3;
+.footer-menu {
+  list-style: none;
 }
 
 .footer-menu a {
@@ -276,4 +311,17 @@ body {
 
 .catalog-filter button {
   background-color: rgba(252, 252, 252, 0.3);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
