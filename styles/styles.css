@@ -1,0 +1,279 @@
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("/fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  color: #2D3440;
+  background-color: #FEAFC3;
+}
+
+.navigation-list {
+  line-height: 20px;
+}
+
+.navigation-item a {
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation-user .navigation-link {
+  font-size: 14px;
+}
+
+.navigation .navigation-link-current {
+  background-color: #FF4A78;
+}
+
+.navigation-user .contact-phone {
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.navigation-user a{
+  background: rgba(252, 252, 252, 0.3);
+}
+
+.first-display h3 {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+}
+
+.first-display p {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.first-display .banner-button {
+  color: #2D3440;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.first-display .ice-cream-list {
+  list-style: none;
+}
+
+.banners h2 {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.banners h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.banner {
+  background-color: #FF7799;
+  background-repeat: no-repeat;
+}
+
+.banner-button {
+  background-color: #FCFCFC;
+  color: #2D3440;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+.goods h2 {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.cart-button {
+  color: #FCFCFC;
+  background-color: #FF2F64;
+}
+
+.raspberry-bonus {
+  background-image: url("/images/raspberry.png");
+}
+
+.marshmallow-bonus {
+  background-image: url("/images/marshmallow.png");
+}
+.card {
+  background-color: #FCFCFC;
+}
+.product-card-link {
+  line-height: 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.product-card-link h3{
+  font-size: 20px;
+}
+
+.item-price {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.seo {
+  background-image: url("/images/waffle-background.png");
+  background-repeat: no-repeat;
+  padding: 24px;
+}
+
+.seo-inner-wrapper {
+  background-color: #FCFCFC;
+}
+
+.seo h1 {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.news {
+  background-image: url("/images/sorbet-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.news h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.news a {
+  font-weight: 700;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: 30px;
+  color: inherit;
+}
+
+.subscription {
+  background-image: url("/images/post-background.png");
+  background-repeat: no-repeat;
+  padding: 6px;
+}
+
+.subscription-wrapper {
+  background-color: #FCFCFC;
+}
+
+.button {
+  color: #FCFCFC;
+  background-color: #FF2F64;
+}
+
+.delivery {
+  background-image: url("/images/delivery-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.delivery h2 {
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 900;
+}
+
+.feedback {
+  background-image: url("/images/feedback-background.jpg");
+  background-repeat: no-repeat;
+}
+
+.feedback .contact-phone {
+  color: #2D3440;
+}
+
+.feedback .clarification {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.contacts p {
+  font-style: normal;
+}
+
+.contacts a {
+  font-weight: 700;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.pagination-show-more {
+  background-color: #FCFCFC;
+  color: inherit;
+}
+
+.pagination-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pagination-item .pagination-current {
+  background-color: #FCFCFC;
+}
+
+.social-media a {
+  text-decoration: none;
+  background-color: #FFFFFF;
+  color: #FEAFC3;
+}
+
+.footer-menu a {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+.footer-important-item a {
+  font-weight: 700;
+}
+.academy-footer-link {
+  color: inherit;
+}
+
+.breadcrumbs {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.breadcrumbs .breadcrumbs-link {
+  color: inherit;
+}
+
+.catalog-filter-group {
+  background-color: rgba(252, 252, 252, 0.3);
+  border: none;
+}
+
+.catalog-filter button {
+  background-color: rgba(252, 252, 252, 0.3);
+}
