@@ -11,7 +11,7 @@
   <nav class="navigation">
     <ul class="navigation-list">
       <li class="navigation-item">
-        <a class="navigation-link" href="index.html">
+        <a href="index.html">
           <img class="main-logo" src="images/logo-gllacy.svg" width="137" height="56"
                alt="Логотип магазина мороженого Глэйси">
         </a>
@@ -63,7 +63,7 @@
     </ul>
   </nav>
 </header>
-<main class="main-index">
+<main class="main-container main-index">
   <section class="first-display">
     <h2 class="visually-hidden">Популярное</h2>
     <ol class="ice-cream-list">
@@ -74,47 +74,31 @@
              alt="Изображение рожка пломбира с клубничным джемом">
       </li>
       <li class="item">
-        <h3>Сливочное мороженое со вкусом банана</h3>
-        <p>Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
+        <h3 class="visually-hidden">Сливочное мороженое со вкусом банана</h3>
+        <p class="visually-hidden">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение даже в самый жаркий летний день.</p>
         <img class="cone-pic" src="images/ice-cream-2.png" width="66" height="150"
              alt="Изображение рожка сливочного мороженого со вкусом банана">
       </li>
       <li class="item">
-        <h3>Карамельный пломбир с маршмеллоу</h3>
-        <p>Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
+        <h3 class="visually-hidden">Карамельный пломбир с маршмеллоу</h3>
+        <p class="visually-hidden">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет сердца сладкоежек всех возрастов.</p>
         <img class="cone-pic" src="images/ice-cream-3.png" width="66" height="150"
              alt="Изображение рожка карамельного пломбира с маршмеллоу">
       </li>
     </ol>
-    <a class="prev" type="button">
-      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M0 19C0 8.50659 8.50659 0 19 0V0C29.4934 0 38 8.50659 38 19V19C38 29.4934 29.4934 38 19 38V38C8.50659 38 0 29.4934 0 19V19Z"
-          fill="#FCFCFC" fill-opacity="0.3"/>
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M20.8033 14.8052C21.063 14.5455 21.063 14.1245 20.8033 13.8648C20.5436 13.6051 20.1226 13.6051 19.8629 13.8648L15.1948 18.5328C14.936 18.7917 14.9351 19.2108 15.1923 19.4707C15.1934 19.4719 15.1946 19.4731 15.1958 19.4742L19.8638 24.1423C20.1235 24.402 20.5446 24.402 20.8043 24.1423C21.064 23.8826 21.064 23.4616 20.8043 23.2019L16.6055 19.0031L20.8033 14.8052Z"
-              fill="#FCFCFC"/>
-        <path
-          d="M19 36C9.61116 36 2 28.3888 2 19H-2C-2 30.598 7.40202 40 19 40V36ZM36 19C36 28.3888 28.3888 36 19 36V40C30.598 40 40 30.598 40 19H36ZM19 2C28.3888 2 36 9.61116 36 19H40C40 7.40202 30.598 -2 19 -2V2ZM19 -2C7.40202 -2 -2 7.40202 -2 19H2C2 9.61116 9.61116 2 19 2V-2Z"
-          fill="#FCFCFC"/>
+    <a class="photo-slider" href="#">
+      <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.8033 1.80521C6.063 1.54551 6.063 1.12446 5.8033 0.864757C5.54361 0.605058 5.12255 0.605058 4.86285 0.864757L0.194774 5.53284C-0.0640686 5.79168 -0.0649218 6.21081 0.192214 6.47071C0.193377 6.47189 0.194544 6.47307 0.195717 6.47424L4.8638 11.1423C5.12349 11.402 5.54455 11.402 5.80425 11.1423C6.06395 10.8826 6.06395 10.4616 5.80425 10.2019L1.60545 6.00307L5.8033 1.80521Z" fill="#FCFCFC"/>
       </svg>
       <span class="visually-hidden">Предыдущее фото</span>
     </a>
-    <a class="next" type="button">
-      <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M0 19C0 8.50659 8.50659 0 19 0C29.4934 0 38 8.50659 38 19C38 29.4934 29.4934 38 19 38C8.50659 38 0 29.4934 0 19Z"
-          fill="#FCFCFC" fill-opacity="0.3"/>
-        <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M18.1353 13.8647C17.8756 13.605 17.4545 13.605 17.1948 13.8647C16.9351 14.1244 16.9351 14.5454 17.1948 14.8051L21.3961 19.0064L17.1948 23.2077C16.9351 23.4674 16.9351 23.8885 17.1948 24.1482C17.4545 24.4079 17.8755 24.4079 18.1352 24.1482L22.8039 19.4795C22.8049 19.4785 22.8058 19.4776 22.8068 19.4767C23.0665 19.217 23.0665 18.7959 22.8068 18.5362L18.1353 13.8647Z"
-              fill="#FCFCFC"/>
-        <path
-          d="M19 36C9.61116 36 2 28.3888 2 19H-2C-2 30.598 7.40202 40 19 40V36ZM36 19C36 28.3888 28.3888 36 19 36V40C30.598 40 40 30.598 40 19H36ZM19 2C28.3888 2 36 9.61116 36 19H40C40 7.40202 30.598 -2 19 -2V2ZM19 -2C7.40202 -2 -2 7.40202 -2 19H2C2 9.61116 9.61116 2 19 2V-2Z"
-          fill="#FCFCFC"/>
+    <a class="photo-slider" href="#">
+      <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.13526 0.864757C0.875566 0.605058 0.454511 0.605058 0.194813 0.864757C-0.0648862 1.12446 -0.0648862 1.54551 0.194813 1.80521L4.39609 6.00649L0.194774 10.2078C-0.0649247 10.4675 -0.0649247 10.8886 0.194774 11.1483C0.454473 11.408 0.875527 11.408 1.13523 11.1483L5.80394 6.47955C5.80489 6.47861 5.80583 6.47767 5.80678 6.47672C6.06648 6.21702 6.06648 5.79597 5.80678 5.53627L1.13526 0.864757Z" fill="#FCFCFC"/>
       </svg>
       <span class="visually-hidden">Следующее фото</span>
     </a>
-    <a href="#" class="banner-button">Заказать</a>
+    <a href="#" class="button banner-button">Заказать</a>
     <ol class="slider-pagination">
       <li class="slider-pagination-item">
         <a class="slider-pagination-button slider-pagination-button-current" href="#">
@@ -167,17 +151,19 @@
   </section>
   <section class="banners">
     <h2>Заказывайте мороженое и получайте подарки!</h2>
-    <div class="banner raspberry-bonus">
-      <h3>Малинка даром!</h3>
-      <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
-      <img class="banner-pic" src="images/slider-1.png" alt="Изображение малины">
-      <a href="#" class="banner-button">Хочу подарок</a>
-    </div>
-    <div class="banner marshmallow-bonus">
-      <h3>Маршмеллоу даром!</h3>
-      <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
-      <img class="banner-pic" src="images/slider-2.png" alt="Изображение маршмеллоу">
-      <a href="#" class="banner-button">Хочу подарок</a>
+    <div class="banners-wrapper">
+      <div class="banner raspberry-bonus">
+        <h3>Малинка даром!</h3>
+        <p>При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку малинового варенья бесплатно.</p>
+        <a href="#" class="button banner-button">Хочу подарок</a>
+        <img class="banner-pic" src="images/slider-1.png" alt="Изображение малины">
+      </div>
+      <div class="banner marshmallow-bonus">
+        <h3>Маршмеллоу даром!</h3>
+        <p>При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно бесплатно.</p>
+        <a href="#" class="button banner-button">Хочу подарок</a>
+        <img class="banner-pic" src="images/slider-2.png" alt="Изображение маршмеллоу">
+      </div>
     </div>
   </section>
   <section class="goods">
@@ -260,22 +246,24 @@
       </ul>
     </div>
   </section>
-  <section class="news">
-    <h2>Новое в нашем блоге</h2>
-    <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
-  </section>
-  <section class="subscription">
-    <div class="subscription-wrapper">
-      <h2 class="visually-hidden">Подписка</h2>
-      <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
-        <label for="subscription-email" class="visually-hidden">
-          <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com">
-        </label>
-        <button class="button" type="submit">Отправить</button>
-      </form>
-    </div>
-  </section>
+  <div class="news-subscription-wrapper">
+    <section class="news">
+      <h2>Новое в нашем блоге</h2>
+      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+    </section>
+    <section class="subscription">
+      <div class="subscription-wrapper">
+        <h2 class="visually-hidden">Подписка</h2>
+        <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
+          <label for="subscription-email" class="visually-hidden">
+            <input type="email" id="subscription-email" name="subscription-email" placeholder="email@example.com">
+          </label>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </section>
+  </div>
   <section class="delivery">
     <h2>Доставка любимого мороженого на дом</h2>
     <p>Хочется полакомиться любимым дессертом, но нет времени съездить в магазин? Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
@@ -296,17 +284,19 @@
     </div>
   </section>
   <section class="feedback">
-    <h2 class="visually-hidden">Обратная связь</h2>
-    <address class="contacts">
-      <p>Адрес главного офиса и офлайн-магазина:<strong>наб. реки Карповки, 5 лит П, Санкт-Петербург</strong></p>
-      <p>Для заказов по телефону:</p>
-      <a class="contact-phone" href="tel:+78121212">+7 (812) 812-12-12</a>
-      <p class="clarification">(с 10 до 20 ежедневно)</p>
-      <a href="#" class="button">Форма обратной связи</a>
-    </address>
+    <div class="feedback-wrapper">
+      <h2 class="visually-hidden">Обратная связь</h2>
+      <address class="contacts">
+        <p>Адрес главного офиса и офлайн-магазина:<strong>наб. реки Карповки, 5 лит П, Санкт-Петербург</strong></p>
+        <p>Для заказов по телефону:</p>
+        <a class="contact-phone" href="tel:+78121212">+7 (812) 812-12-12</a>
+        <p class="clarification">(с 10 до 20 ежедневно)</p>
+        <a href="#" class="button">Форма обратной связи</a>
+      </address>
+    </div>
   </section>
 </main>
-<footer>
+<footer class="main-footer">
   <ul class="social-media">
     <li>
       <a href="https://vk.com/htmlacademy">
