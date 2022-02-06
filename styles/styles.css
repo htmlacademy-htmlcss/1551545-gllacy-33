@@ -32,6 +32,7 @@ body {
   flex-direction: column;
   margin: 0;
   min-height: 100%;
+  width: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -123,6 +124,10 @@ body {
   width: 1170px;
 }
 
+.bottom-buttons {
+  display: flex;
+}
+
 .first-display h3 {
   font-weight: 900;
   font-size: 36px;
@@ -146,6 +151,11 @@ body {
   line-height: 20px;
   font-weight: 700;
   text-decoration: none;
+}
+
+.form-button {
+  color: #FCFCFC;
+  background-color: #FF2F64;
 }
 
 .banner-button {
@@ -174,10 +184,6 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-}
-
-.ice-cream-list .main-item {
-  display: flex;
 }
 
 .photo-slider {
@@ -214,6 +220,7 @@ body {
   width: 52px;
   display: flex;
   justify-content: space-between;
+  margin-right: auto;
 }
 
 .slider-pagination-button {
@@ -244,7 +251,6 @@ body {
   width: 104px;
   display: flex;
   justify-content: space-between;
-  margin: auto auto auto 0;
 }
 
 .goods h2 {
@@ -286,7 +292,7 @@ body {
 }
 
 .seo {
-  background-image: url("/images/background-waffle.png");
+  background-image: url("../images/background-waffle.png");
   background-repeat: repeat;
   padding: 24px;
   margin-top: 80px;
@@ -331,7 +337,7 @@ body {
 }
 
 .subscription {
-  background-image: url("/images/background-post.jpg");
+  background-image: url("../images/background-post.jpg");
   background-repeat: no-repeat;
   width: 570px;
 }
@@ -342,7 +348,7 @@ body {
 }
 
 .delivery {
-  background-image: url("/images/background-delivery.jpg");
+  background-image: url("../images/background-delivery.jpg");
   background-repeat: no-repeat;
   margin-top: 76px;
   padding: 63px;
@@ -362,7 +368,7 @@ body {
 .feedback {
   margin-top: 80px;
   padding: 63px;
-  background-image: url("/images/background-feedback.jpg");
+  background-image: url("../images/background-feedback.jpg");
   background-repeat: no-repeat;
 }
 
@@ -430,18 +436,19 @@ body {
 .main-footer {
   margin: auto;
   display: flex;
+  justify-content: space-between;
   width: 1170px;
+  padding: 48px 0;
 }
 
 .main-footer ul {
   padding: 0;
+  margin: 0;
 }
 
 .footer-menu {
   list-style: none;
   width: 356px;
-  margin-right: 200px;
-  margin-left: auto;
 }
 
 .footer-menu a {
@@ -459,7 +466,6 @@ body {
   font-size: 12px;
   line-height: 16px;
   width: 193px;
-  margin: auto 0;
 }
 
 .made-by p {
