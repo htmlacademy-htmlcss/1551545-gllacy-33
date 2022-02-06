@@ -23,7 +23,16 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100%;
+  width: 100%;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 22px;
@@ -31,9 +40,23 @@ body {
   background-color: #FEAFC3;
 }
 
+.navigation {
+  display: flex;
+  width: 1170px;
+  margin: 0 auto;
+}
+
 .navigation-list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   line-height: 20px;
   list-style: none;
+}
+
+.navigation-item:not(:last-child) {
+  margin-right: 32px;
 }
 
 .navigation-item a {
@@ -61,6 +84,15 @@ body {
   border: none;
 }
 
+.navigation-user {
+  width: 419px;
+  margin-left: auto;
+}
+
+.navigation-user .navigation-item {
+  margin: 0;
+}
+
 .navigation-user .navigation-link {
   font-size: 14px;
 }
@@ -78,6 +110,24 @@ body {
   background: rgba(252, 252, 252, 0.3);
 }
 
+.main-container {
+  flex-grow: 1;
+  margin: auto;
+}
+
+.main-index {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.main-inner {
+  width: 1170px;
+}
+
+.bottom-buttons {
+  display: flex;
+}
+
 .first-display h3 {
   font-weight: 900;
   font-size: 36px;
@@ -89,14 +139,30 @@ body {
   line-height: 24px;
 }
 
+.banners-wrapper {
+  display: flex;
+}
+
+.button {
+  padding: 12px 32px;
+  border-radius: 26px;
+  border: 4px solid;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.form-button {
+  color: #FCFCFC;
+  background-color: #FF2F64;
+}
+
 .banner-button {
   background: #FCFCFC;
-  border: 4px solid rgba(252, 252, 252, 0.4);
+  border-color: rgba(252, 252, 252, 0.4);
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
-  border-radius: 26px;
   color: #2D3440;
-  text-decoration: none;
-  font-weight: 700;
 }
 
 .banner-button:hover,
@@ -116,6 +182,17 @@ body {
 
 .first-display .ice-cream-list {
   list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.photo-slider {
+  text-decoration: none;
+  display: block;
+  border: 2px solid #FCFCFC;
+  width: 38px;
+  border-radius: 50%;
+  background-color: rgba(252, 252, 252, 0.3);
 }
 
 .banners h2 {
@@ -131,19 +208,38 @@ body {
 
 .banner {
   background-color: #FF7799;
-  background-repeat: no-repeat;
+  width: 570px;
+}
+
+.banner:nth-child(2n) {
+  margin-left: auto;
 }
 
 .slider-pagination {
   list-style: none;
+  width: 52px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: auto;
 }
 
 .slider-pagination-button {
+  display: block;
   background-color: #FCFCFC;
   border-radius: 50%;
   opacity: 0.3;
   width: 12px;
   height: 12px;
+}
+
+.slider-pagination-button:hover {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #FCFCFC;
+}
+
+.slider-pagination-button:focus {
+  border: 1px solid #2D3440;
 }
 
 .slider-pagination-button-current {
@@ -152,6 +248,9 @@ body {
 
 .social-media {
   list-style: none;
+  width: 104px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .goods h2 {
@@ -167,10 +266,15 @@ body {
 
 .card-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .card {
   background-color: #FCFCFC;
+  width: 270px;
 }
 .product-card-link {
   line-height: 24px;
@@ -188,9 +292,10 @@ body {
 }
 
 .seo {
-  background-image: url("/images/background-waffle.png");
+  background-image: url("../images/background-waffle.png");
   background-repeat: repeat;
   padding: 24px;
+  margin-top: 80px;
 }
 
 .seo-inner-wrapper {
@@ -203,9 +308,18 @@ body {
   font-weight: 900;
 }
 
+.news-subscription-wrapper {
+  display: flex;
+  margin-top: 80px;
+  justify-content: space-between;
+}
+
 .news {
   background-image: url("/images/background-sorbet.jpg");
   background-repeat: no-repeat;
+  width: 570px;
+  padding-left: 32px;
+  padding-right: 235px;
 }
 
 .news h2 {
@@ -223,23 +337,21 @@ body {
 }
 
 .subscription {
-  background-image: url("/images/background-post.jpg");
+  background-image: url("../images/background-post.jpg");
   background-repeat: no-repeat;
-  padding: 6px;
+  width: 570px;
 }
 
 .subscription-wrapper {
   background-color: #FCFCFC;
-}
-
-.button {
-  color: #FCFCFC;
-  background-color: #FF2F64;
+  width: 558px;
 }
 
 .delivery {
-  background-image: url("/images/background-delivery.jpg");
+  background-image: url("../images/background-delivery.jpg");
   background-repeat: no-repeat;
+  margin-top: 76px;
+  padding: 63px;
 }
 
 .delivery h2 {
@@ -248,9 +360,22 @@ body {
   font-weight: 900;
 }
 
+.customer-information {
+  background-color: #FCFCFC;
+  width: 500px;
+}
+
 .feedback {
-  background-image: url("/images/background-feedback.jpg");
+  margin-top: 80px;
+  padding: 63px;
+  background-image: url("../images/background-feedback.jpg");
   background-repeat: no-repeat;
+}
+
+.feedback-wrapper {
+  background: #FCFCFC;
+  box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
+  width: 343px;
 }
 
 .feedback .contact-phone {
@@ -264,6 +389,7 @@ body {
 
 .contacts p {
   font-style: normal;
+  margin: 0;
 }
 
 .contacts a {
@@ -272,9 +398,30 @@ body {
   text-decoration: none;
 }
 
+.pagination-wrapper {
+  display:flex;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-left: auto;
+  padding: 0;
+}
+
 .pagination-show-more {
   background-color: #FCFCFC;
   color: inherit;
+  width: 179px;
+  padding: 12px 32px;
+  margin-left: 494px;
+}
+
+.pagination-item a {
+  display: block;
+  width: 24px;
+  border-radius: 50%;
 }
 
 .pagination-link {
@@ -282,12 +429,26 @@ body {
   text-decoration: none;
 }
 
-.pagination-item .pagination-current {
+.pagination-current {
   background-color: #FCFCFC;
+}
+
+.main-footer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  padding: 48px 0;
+}
+
+.main-footer ul {
+  padding: 0;
+  margin: 0;
 }
 
 .footer-menu {
   list-style: none;
+  width: 356px;
 }
 
 .footer-menu a {
@@ -300,6 +461,17 @@ body {
 .footer-important-item a {
   font-weight: 700;
 }
+
+.made-by {
+  font-size: 12px;
+  line-height: 16px;
+  width: 193px;
+}
+
+.made-by p {
+  margin: 0;
+}
+
 .academy-footer-link {
   color: inherit;
 }
@@ -308,6 +480,11 @@ body {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  width: 250px;
 }
 
 .breadcrumbs .breadcrumbs-link {
@@ -317,10 +494,6 @@ body {
 .catalog-filter-group {
   background-color: rgba(252, 252, 252, 0.3);
   border: none;
-}
-
-.catalog-filter button {
-  background-color: rgba(252, 252, 252, 0.3);
 }
 
 .visually-hidden {
