@@ -81,17 +81,21 @@
   <section class="filter">
     <h2 class="visually-hidden">Список десертов с фильтрами</h2>
     <form class="catalog-filter">
-      <label class="filter-sort">Сортировка:
+      <fieldset class="catalog-filter-group">
+        <legend class="catalog-filter-title">Сортировка:</legend>
         <select class="select-control" aria-label="Сортировка">
           <option value="popular">по популярности</option>
           <option value="cheap">сначала дешевле</option>
           <option value="expensive">сначала дороже</option>
         </select>
-      </label>
-      <label>Цена: 100 ₽ – 500 ₽
-        <input class="filter-range" type="range">
-      </label>
+      </fieldset>
       <fieldset class="catalog-filter-group">
+        <legend class="catalog-filter-title">Цена: 100 ₽ – 500 ₽</legend>
+        <label>
+          <input class="filter-range" type="range">
+        </label>
+      </fieldset>
+      <fieldset class="catalog-filter-group fats">
         <legend class="catalog-filter-title">Жирность:</legend>
         <label class="control">
           <input class="control-input" type="radio" name="zero-percent">
@@ -110,7 +114,7 @@
           выше 30%
         </label>
       </fieldset>
-      <fieldset class="catalog-filter-group">
+      <fieldset class="catalog-filter-group toppings">
         <legend class="catalog-filter-title">Наполнители:</legend>
         <label class="control">
           <input class="control-input" type="checkbox" name="chocolate" checked>
@@ -133,7 +137,7 @@
           джемы
         </label>
       </fieldset>
-      <button type="submit">Применить</button>
+      <button class="button filter-button" type="submit">Применить</button>
     </form>
     <ul class="card-list">
       <li class="card">
@@ -318,12 +322,14 @@
       </li>
     </ul>
     <div class="pagination-wrapper">
-      <a class="button pagination-show-more" href="#">Показать ещё</a>
+      <a class="button pagination-show-more banner-button" href="#">Показать ещё</a>
       <ul class="pagination">
         <li class="pagination-item">
           <a class="pagination-link pagination-prev pagination-disabled">
             <svg width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M5.80335 1.80515C6.06305 1.54545 6.06305 1.12439 5.80335 0.864696C5.54365 0.604997 5.12259 0.604997 4.8629 0.864696L0.194816 5.53277C-0.0640262 5.79162 -0.0648794 6.21075 0.192257 6.47065C0.193419 6.47183 0.194587 6.47301 0.19576 6.47418L4.86384 11.1423C5.12354 11.402 5.54459 11.402 5.80429 11.1423C6.06399 10.8826 6.06399 10.4615 5.80429 10.2018L1.60549 6.00301L5.80335 1.80515Z" fill="#2D3440"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M5.80335 1.80515C6.06305 1.54545 6.06305 1.12439 5.80335 0.864696C5.54365 0.604997 5.12259 0.604997 4.8629 0.864696L0.194816 5.53277C-0.0640262 5.79162 -0.0648794 6.21075 0.192257 6.47065C0.193419 6.47183 0.194587 6.47301 0.19576 6.47418L4.86384 11.1423C5.12354 11.402 5.54459 11.402 5.80429 11.1423C6.06399 10.8826 6.06399 10.4615 5.80429 10.2018L1.60549 6.00301L5.80335 1.80515Z"
+                    fill="#2D3440"/>
             </svg>
             <span class="visually-hidden">Предыдущая страница</span>
           </a>
@@ -346,7 +352,9 @@
         <li class="pagination-item">
           <a class="pagination-link pagination-next" href="#">
             <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M1.13526 0.864696C0.875566 0.604997 0.454511 0.604997 0.194813 0.864696C-0.0648862 1.12439 -0.0648862 1.54545 0.194813 1.80515L4.39609 6.00643L0.194774 10.2077C-0.0649247 10.4674 -0.0649247 10.8885 0.194774 11.1482C0.454473 11.4079 0.875527 11.4079 1.13523 11.1482L5.80394 6.47949C5.80489 6.47855 5.80583 6.47761 5.80678 6.47666C6.06648 6.21696 6.06648 5.79591 5.80678 5.53621L1.13526 0.864696Z" fill="#2D3440"/>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.13526 0.864696C0.875566 0.604997 0.454511 0.604997 0.194813 0.864696C-0.0648862 1.12439 -0.0648862 1.54545 0.194813 1.80515L4.39609 6.00643L0.194774 10.2077C-0.0649247 10.4674 -0.0649247 10.8885 0.194774 11.1482C0.454473 11.4079 0.875527 11.4079 1.13523 11.1482L5.80394 6.47949C5.80489 6.47855 5.80583 6.47761 5.80678 6.47666C6.06648 6.21696 6.06648 5.79591 5.80678 5.53621L1.13526 0.864696Z"
+                    fill="#2D3440"/>
             </svg>
             <span class="visually-hidden">Следующая страница</span>
           </a>
@@ -355,7 +363,7 @@
     </div>
   </section>
 </main>
-<footer class="main-footer">
+<footer class="main-footer catalog-footer">
   <ul class="social-media">
     <li>
       <a href="https://vk.com/htmlacademy">
