@@ -68,6 +68,10 @@ body {
   text-decoration: none;
 }
 
+.navigation-user a:not(.contact-phone) {
+  font-size: 14px;
+}
+
 .navigation-user .navigation-item:nth-child(2) .navigation-link {
   content: "";
   height: 20px;
@@ -146,10 +150,6 @@ body {
   display: flex;
 }
 
-.first-display {
-  margin-bottom: 24px;
-}
-
 .first-display h3 {
   grid-column: 1/2;
   grid-row: 2/3;
@@ -185,7 +185,6 @@ body {
 
 .banners-wrapper {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .button {
@@ -204,6 +203,7 @@ body {
   background: #FCFCFC;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   color: #2D3440;
+  width: max-content;
 }
 
 .banner-button:hover,
@@ -341,7 +341,7 @@ body {
   font-weight: 900;
   text-align: center;
   width: 443px;
-  margin: 56px auto;
+  margin: 80px auto 56px;
 }
 
 .banners h3 {
@@ -351,11 +351,13 @@ body {
 }
 
 .banners p {
-  margin-bottom: 48px;
-  width: 321px;
+  margin-bottom: 32px;
+  width: 70%;
 }
 
 .banner {
+  display: flex;
+  flex-direction: column;
   background-color: #FF7799;
   width: 490px;
   border-radius: 16px;
@@ -419,9 +421,8 @@ body {
   padding: 0;
 }
 
-.social-media svg:focus {
-  background-color: #2D3440;
-  outline-color: #2D3440;
+.social-media a {
+  display: inline-block;
 }
 
 .social-media svg {
@@ -432,6 +433,11 @@ body {
 .social-media svg:hover,
 .social-media svg:active {
   background-color: #2D3440;;
+}
+
+.social-media svg:focus {
+  background-color: #2D3440;
+  outline-color: #2D3440;
 }
 
 .social-media li:not(:last-child) {
@@ -501,6 +507,7 @@ body {
 }
 
 .product-card-link {
+  display: inline-block;
   line-height: 24px;
   text-decoration: none;
   color: inherit;
@@ -609,7 +616,7 @@ body {
 }
 
 .news {
-  background-image: url("/images/background-sorbet.jpg");
+  background-image: url("../images/background-sorbet.jpg");
   background-repeat: no-repeat;
   width: 506px;
   padding: 32px;
@@ -837,6 +844,20 @@ body {
   padding: 8px;
 }
 
+.filter-button:disabled {
+  opacity: 0.4;
+}
+
+.filter-button:focus {
+  outline-color: #2D3440;
+}
+
+.filter-button:hover,
+.filter-button:active {
+  background: #FCFCFC;
+  outline-color: rgba(252, 252, 252, 0.3);
+}
+
 .pagination-wrapper {
   display:flex;
   justify-content: end;
@@ -921,10 +942,14 @@ body {
   color: inherit;
 }
 .footer-important-item a {
+  position: relative;
   font-weight: 700;
 }
 
 .footer-important-item a::before {
+  position: absolute;
+  left: -23px;
+  top: 0;
   background-image: url("../images/icon-heart.svg");
   background-repeat: no-repeat;
   background-position: center;
