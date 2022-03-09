@@ -6,7 +6,6 @@ let navigationLogin = document.querySelector('.log-in .navigation-link');
 let popoverLogin = document.querySelector('.popover-log-in');
 let navigationCart = document.querySelector('.menu-cart .navigation-link');
 let popoverCart = document.querySelector('.menu-cart .popover');
-let navigationLink = document.querySelector('.navigation-link');
 let modalWindow = document.querySelector('.modal-container');
 let buttonFeedback = document.querySelector('.feedback .button');
 let exitButton = document.querySelector('.modal .delete-cross-button');
@@ -14,47 +13,40 @@ let exitButton = document.querySelector('.modal .delete-cross-button');
 
 navigationCatalog.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (popoverCatalog.style.display === 'none') {
-    popoverCatalog.style.display = 'block';
-    navigationLink.classList.toggle(':active');
-  } else {
-    popoverCatalog.style.display = 'none'
-  }
+  navigationCatalog.classList.toggle('js-menu-open');
+  popoverCatalog.classList.toggle('js-popover-closed');
+})
+
+navigationCatalog.addEventListener('mouseover', function (evt) {
+  evt.preventDefault();
+  navigationCatalog.classList.add('js-menu-open');
+  popoverCatalog.classList.remove('js-popover-closed');
 })
 
 navigationSearch.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (popoverSearch.style.display ==='none') {
-    popoverSearch.style.display = 'block';
-  } else {
-    popoverSearch.style.display = 'none';
-  }
+  navigationSearch.classList.add('js-menu-open');
+  popoverSearch.classList.toggle('js-popover-closed');
 })
 
 navigationLogin.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (popoverLogin.style.display ==='none') {
-    popoverLogin.style.display = 'block';
-  } else {
-    popoverLogin.style.display = 'none';
-  }
+  navigationLogin.classList.toggle('js-menu-open');
+  popoverLogin.classList.toggle('js-popover-closed');
 })
 
 navigationCart.addEventListener('click', function (evt) {
   evt.preventDefault();
-  if (popoverCart.style.display ==='none') {
-    popoverCart.style.display = 'block';
-  } else {
-    popoverCart.style.display = 'none';
-  }
+  navigationCart.classList.toggle('js-menu-open');
+  popoverCart.classList.toggle('js-popover-closed');
 })
 
 buttonFeedback.addEventListener('click', function (evt) {
   evt.preventDefault();
-  modalWindow.style.display = 'flex';
+  modalWindow.classList.remove('js-popover-closed');
 })
 
 exitButton.addEventListener('click', function(evt){
   evt.preventDefault();
-  modalWindow.style.display = 'none';
+  modalWindow.classList.add('js-popover-closed');
 })
