@@ -543,7 +543,9 @@ img {
 }
 
 .button {
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 12px 32px;
   border-radius: 26px;
   border: none;
@@ -558,7 +560,7 @@ img {
 
 .banner-button:hover,
 .banner-button:active {
-  background: rgba(252, 252, 252, 0.4);
+  background-color: rgba(252, 252, 252, 0.4);
   box-shadow: 0 0 0 4px #FCFCFC;
 }
 
@@ -567,14 +569,48 @@ img {
 }
 
 .banner-button {
-  background: #FCFCFC;
+  background-color: #FCFCFC;
   box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
   color: #2D3440;
 }
 
-.banner-button:disabled {
-  background: #E7E7E7;
+.banner-button:disabled,
+.banner-button:disabled:hover,
+.banner-button:disabled:active,
+.banner-button-disabled,
+.banner-button-disabled:hover,
+.banner-button-disabled:active,
+.banner-button-disabled:focus {
+  color: #B9B9B9;
+  background-color: #E7E7E7;
   box-shadow: 0 0 0 4px rgba(252, 252, 252, 0.4);
+  cursor: default;
+}
+
+/*Loading buttons via javascript*/
+
+.banner-button-loading::after {
+  content: "";
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='.24' cx='8' cy='8' r='7' stroke='%23242424' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M15 8a7 7 0 0 0-7-7' stroke='%23242424' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+.form-button-loading::after {
+  content: "";
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle opacity='.25' cx='8' cy='8' r='7' stroke='%23FCFCFC' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M15 8a7 7 0 0 0-7-7' stroke='%23FCFCFC' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
 }
 
 .form-button {
@@ -586,7 +622,7 @@ img {
 .form-button:hover,
 .form-button:active {
   color: #2D3440;
-  background: rgba(252, 252, 252, 0.3);
+  background-color: rgba(252, 252, 252, 0.3);
   box-shadow: 0 0 0 4px #FF2F64;
   border-radius: 26px;
 }
@@ -597,10 +633,15 @@ img {
   box-shadow: 0 0 0 2px #2D3440;
 }
 
-.form-button:disabled {
+.form-button:disabled,
+.form-button-disabled,
+.form-button-disabled:hover,
+.form-button-disabled:active,
+.form-button-disabled:focus {
   color: #565C66;
-  background: #B9B9B9;
-  border: 4px solid rgba(185, 185, 185, 0.3);
+  background-color: #B9B9B9;
+  box-shadow: 0 0 0 4px rgba(185, 185, 185, 0.3);
+  cursor: default;
 }
 
 .ice-cream-list {
@@ -685,7 +726,7 @@ img {
 
 .photo-slider:hover,
 .photo-slider:active {
-  background: #FCFCFC;
+  background-color: #FCFCFC;
 }
 
 .photo-slider:hover path,
@@ -856,11 +897,18 @@ img {
   background-color: #FF2F64;
 }
 
-.cart-button:disabled {
-  background: url("../images/icon-cart-disabled.svg") #B9B9B9;
+.cart-button:disabled,
+.cart-button:disabled:hover,
+.cart-button:disabled:active,
+.cart-button-disabled,
+.cart-button-disabled:hover,
+.cart-button-disabled:active,
+.cart-button-disabled:focus {
+  background: url("../images/icon-cart-disabled.svg") center no-repeat #B9B9B9;
   width: 32px;
   height: 32px;
   border: none;
+  cursor: default;
 }
 
 .card-list {
@@ -1044,13 +1092,13 @@ img {
 }
 
 .subscribe-form input {
-  width: 298px;
+  flex-grow: 1;
   border-radius: 4px;
   margin: 0;
 }
 
 .subscribe-form .button {
-  max-width: 150px;
+  width: max-content;
   margin-left: 24px;
 }
 
@@ -1224,7 +1272,7 @@ img {
 }
 
 .text-field:disabled {
-  background: #E7E7E7;
+  background-color: #E7E7E7;
   border-color: #B9B9B9;
 }
 
@@ -1261,7 +1309,7 @@ img {
 }
 
 .feedback-wrapper {
-  background: #FCFCFC;
+  background-color: #FCFCFC;
   box-shadow: 0 8px 16px rgba(45, 52, 64, 0.12);
   width: 343px;
   border-radius: 8px;
@@ -1302,15 +1350,17 @@ img {
 }
 
 .contacts .form-button {
-  display: block;
   width: max-content;
   margin-top: 32px;
 }
 
-.filter-button {
+.filter-button,
+.filter-button:disabled:hover,
+.filter-button:disabled:active {
   font-size: 14px;
+  color: #2D3440;
   align-self: end;
-  background: rgba(252, 252, 252, 0.3);
+  background-color: rgba(252, 252, 252, 0.3);
   box-shadow: 0 0 0 2px #FCFCFC;
   border-radius: 20px;
   padding: 8px;
@@ -1319,6 +1369,7 @@ img {
 
 .filter-button:disabled {
   opacity: 0.4;
+  cursor: default;
 }
 
 .filter-button:focus {
@@ -1327,7 +1378,7 @@ img {
 
 .filter-button:hover,
 .filter-button:active {
-  background: #FCFCFC;
+  background-color: #FCFCFC;
   box-shadow: 0 0 0 2px rgba(252, 252, 252, 0.3);
 }
 
@@ -1393,7 +1444,7 @@ img {
 }
 
 .pagination-link:hover {
-  background: rgba(252, 252, 252, 0.3);
+  background-color: rgba(252, 252, 252, 0.3);
   width: 22px;
   height: 22px;
   border: 1px solid #FCFCFC;
@@ -1629,9 +1680,14 @@ img {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.615 1.615a.962.962 0 0 1 .68-.282h8.96a.667.667 0 1 0 0-1.333h-8.96A2.295 2.295 0 0 0 0 2.296v11.407A2.297 2.297 0 0 0 2.296 16h11.402a2.295 2.295 0 0 0 2.295-2.296V8a.667.667 0 1 0-1.333 0v5.703a.963.963 0 0 1-.962.963H2.296a.962.962 0 0 1-.963-.963V2.296c0-.255.102-.5.282-.68Zm14.202.325a.667.667 0 1 0-.968-.917L7.614 8.66 5.782 6.727a.667.667 0 0 0-.968.917l2.316 2.444a.667.667 0 0 0 .968 0l7.719-8.148Z' fill='%23FCFCFC'/%3E%3C/svg%3E");
 }
 
-.control-input:disabled + .touch-sign {
+.control-input:disabled + .touch-sign,
+.control-input:disabled:hover + .touch-sign,
+.control-input:disabled:active + .touch-sign,
+.control-input:disabled:focus +.touch-sign {
   border-color: #2D3440;
   opacity: 0.4;
+  cursor: default;
+  box-shadow: none;
 }
 
 .filter-price-wrapper {
@@ -1641,6 +1697,7 @@ img {
 .filter-price-label {
   display: flex;
   margin-right: 3px;
+  align-items: baseline;
 }
 
 .range-input {
