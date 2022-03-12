@@ -1,5 +1,3 @@
-let navigationCatalog = document.querySelector('.navigation-catalog');
-let popoverCatalog = document.querySelector('.popover-catalog');
 let navigationSearch = document.querySelector('.navigation-search');
 let popoverSearch = document.querySelector('.popover-search');
 let navigationLogin = document.querySelector('.log-in .navigation-link');
@@ -11,21 +9,9 @@ let buttonFeedback = document.querySelector('.feedback .button');
 let exitButton = document.querySelector('.modal .delete-cross-button');
 
 
-navigationCatalog.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  navigationCatalog.classList.toggle('js-menu-open');
-  popoverCatalog.classList.toggle('js-popover-closed');
-})
-
-navigationCatalog.addEventListener('mouseover', function (evt) {
-  evt.preventDefault();
-  navigationCatalog.classList.add('js-menu-open');
-  popoverCatalog.classList.remove('js-popover-closed');
-})
-
 navigationSearch.addEventListener('click', function (evt) {
   evt.preventDefault();
-  navigationSearch.classList.add('js-menu-open');
+  navigationSearch.classList.toggle('js-menu-open');
   popoverSearch.classList.toggle('js-popover-closed');
 })
 

@@ -16,12 +16,12 @@
     <ul class="navigation-list">
       <li class="navigation-item navigation-current">
         <a class="navigation-link navigation-catalog" href="#">Каталог</a>
-        <div class="popover popover-catalog js-popover-closed">
+        <div class="popover popover-catalog">
           <div class="popover-content">
             <h2 class="popover-title">Новинки</h2>
             <ul class="popover-catalog-list">
               <li class="popover-item">
-                <a class="popover-link popover-link-current" href="#">Сливочное</a>
+                <a class="popover-link popover-link-current">Сливочное</a>
               </li>
               <li class="popover-item">
                 <a class="popover-link" href="#">Щербеты</a>
@@ -56,7 +56,8 @@
             <input class="text-field" type="text" placeholder="Поиск по сайту">
           </label>
           <button class="delete-cross-button">
-            <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"
                     fill="#B9B9B9"/>
@@ -97,11 +98,14 @@
             <ul class="cart-filled-list">
               <li class="cart-filled-item">
                 <img src="images/cart-catalog-1.jpg" width="46" height="46" alt="Изображение мороженого">
-                <h3>Малинка</h3>
-                <span class="cart-filled-quantity">1 кг х 310 ₽</span>
+                <div class="cart-item-information">
+                  <h3>Малинка</h3>
+                  <span class="cart-filled-quantity">1 кг х 310 ₽</span>
+                </div>
                 <span class="cart-filled-price">310 ₽</span>
                 <button class="cart-delete-button">
-                  <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"
                           fill="#2D3440"/>
@@ -110,11 +114,14 @@
               </li>
               <li class="cart-filled-item">
                 <img src="images/cart-catalog-2.jpg" width="46" height="46" alt="Изображение мороженого">
-                <h3>Бабл-гам</h3>
-                <span class="cart-filled-quantity">1,5 кг х 320 ₽</span>
+                <div class="cart-item-information">
+                  <h3>Бабл-гам</h3>
+                  <span class="cart-filled-quantity">1,5 кг х 320 ₽</span>
+                </div>
                 <span class="cart-filled-price">480 ₽</span>
                 <button class="cart-delete-button">
-                  <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                           d="M9.803 1.138A.667.667 0 1 0 8.86.195L5 4.056 1.137.196a.667.667 0 1 0-.943.942L4.056 5 .196 8.86a.667.667 0 0 0 .942.943L5 5.942 8.86 9.803a.667.667 0 1 0 .943-.943L5.942 5l3.861-3.862Z"
                           fill="#2D3440"/>
@@ -188,28 +195,31 @@
           <ul class="filter-field filter-list-fats">
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="visually-hidden control-input" type="radio" value="0%" name="fats">
+                <input class="visually-hidden control-input" type="radio" value="0%" role="radio" name="fats">
                 <span class="touch-sign"></span>
                 <span class="control-label">0%</span>
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="visually-hidden control-input" type="radio" value="below10%" name="fats" checked>
+                <input class="visually-hidden control-input" type="radio" value="below10%" aria-label="radio"
+                       name="fats" checked>
                 <span class="touch-sign"></span>
                 <span class="control-label">до 10%</span>
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="visually-hidden control-input" type="radio" value="below30%" name="fats">
+                <input class="visually-hidden control-input" type="radio" value="below30%" aria-label="radio"
+                       name="fats">
                 <span class="touch-sign"></span>
                 <span class="control-label">до 30%</span>
               </label>
             </li>
             <li class="catalog-filter-item">
               <label class="control">
-                <input class="visually-hidden control-input" type="radio" value="above30%" name="fats">
+                <input class="visually-hidden control-input" type="radio" value="above30%" aria-label="radio"
+                       name="fats">
                 <span class="touch-sign"></span>
                 <span class="control-label">выше 30%</span>
               </label>
@@ -400,7 +410,8 @@
       <ul class="pagination">
         <li class="pagination-item">
           <a class="pagination-link pagination-prev pagination-disabled">
-            <svg role="img" aria-label="Предыдущая страница" width="6" height="12" viewBox="0 0 6 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Предыдущая страница" width="6" height="12" viewBox="0 0 6 12" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M5.803 1.805a.665.665 0 1 0-.94-.94L.195 5.533a.665.665 0 0 0 0 .941l4.669 4.668a.665.665 0 1 0 .94-.94L1.605 6.003l4.198-4.198Z"
                     fill="#2D3440"/>
@@ -425,7 +436,8 @@
         </li>
         <li class="pagination-item">
           <a class="pagination-link pagination-next" href="#">
-             <svg role="img" aria-label="Следующая страница" width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg role="img" aria-label="Следующая страница" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M1.135.865a.665.665 0 1 0-.94.94l4.201 4.201-4.201 4.202a.665.665 0 0 0 .94.94L5.804 6.48a.665.665 0 0 0 .003-.943L1.135.865Z"
                     fill="#2D3440"/>
@@ -441,7 +453,8 @@
   <ul class="social-media">
     <li>
       <a class="social-link" href="https://vk.com/htmlacademy">
-        <svg role="img" aria-label="Вконтакте" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg role="img" aria-label="Вконтакте" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12Zm-11.412 2.975h-.717s-1.582.083-2.976-1.188c-1.52-1.388-2.863-4.14-2.863-4.14s-.077-.18.007-.268c.095-.098.352-.104.352-.104l1.715-.01s.161.024.277.098c.095.062.149.176.149.176s.277.615.644 1.17c.716 1.085 1.05 1.322 1.293 1.206.354-.17.248-1.533.248-1.533s.007-.496-.178-.716c-.143-.17-.414-.22-.533-.235-.096-.011.062-.207.267-.295.309-.133.854-.14 1.498-.135.501.005.645.032.842.074.455.096.44.405.41 1.07-.01.2-.02.43-.02.697 0 .06-.002.124-.004.19-.01.34-.023.73.233.876.132.074.453.011 1.256-1.185.381-.566.667-1.233.667-1.233s.062-.119.16-.17c.098-.051.232-.036.232-.036l1.805-.01s.542-.056.63.158c.091.226-.203.751-.94 1.612-.696.813-1.036 1.115-1.01 1.38.02.196.242.372.67.72.888.722 1.124 1.101 1.18 1.192a.447.447 0 0 0 .011.016c.398.578-.44.623-.44.623l-1.603.02s-.345.06-.798-.214c-.237-.142-.469-.375-.69-.597-.337-.339-.649-.652-.915-.578-.447.124-.433.967-.433.967s.004.18-.098.277c-.11.104-.328.125-.328.125Z"
                 fill="#FCFCFC"/>
@@ -451,7 +464,8 @@
     </li>
     <li>
       <a class="social-link" href="https://facebook.com/htmlacademy">
-        <svg role="img" aria-label="Фейсбук" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg role="img" aria-label="Фейсбук" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12Zm-9.571.9H13V18h-2.286v-5.1H9v-2.4h1.714V8.82c0-1.826 1.102-2.82 2.653-2.82.743 0 1.447.058 1.633.084V8.1h-.857C13 8.1 13 8.682 13 9.3v1.2h2l-.571 2.4Z"
                 fill="#FCFCFC"/>
@@ -461,7 +475,8 @@
     </li>
     <li>
       <a class="social-link" href="https://instagram.com/htmlacademy">
-        <svg role="img" aria-label="Инстаграм" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg role="img" aria-label="Инстаграм" width="24" height="24" viewBox="0 0 24 24" fill="none"
+             xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M24 12c0 6.627-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0s12 5.373 12 12Zm-9.527-5.964C13.833 6.006 13.63 6 12 6s-1.834.008-2.473.036c-.64.03-1.074.13-1.457.279-.4.15-.763.387-1.063.692-.306.3-.542.662-.692 1.063-.149.383-.249.817-.279 1.457C6.006 10.167 6 10.37 6 12s.008 1.834.036 2.473c.03.64.13 1.075.279 1.457.15.4.387.763.692 1.063.3.306.662.542 1.063.692.383.148.818.249 1.457.279.64.03.843.036 2.473.036s1.834-.008 2.473-.036c.64-.03 1.075-.13 1.457-.279.4-.15.763-.387 1.063-.692.306-.3.542-.662.692-1.063.148-.383.249-.818.279-1.457.03-.64.036-.843.036-2.473s-.008-1.834-.036-2.473c-.03-.64-.13-1.075-.279-1.457-.15-.4-.387-.763-.692-1.063a2.925 2.925 0 0 0-1.063-.692c-.383-.149-.818-.249-1.457-.279ZM9.88 9.879a3 3 0 1 1 4.242 4.243A3 3 0 0 1 9.88 9.879Zm5.801-1.56a.75.75 0 1 1-1.06 1.061.75.75 0 0 1 1.06-1.06Zm-2.407 2.408a1.8 1.8 0 1 0-2.546 2.546 1.8 1.8 0 0 0 2.546-2.546Z"
                 fill="#FCFCFC"/>
