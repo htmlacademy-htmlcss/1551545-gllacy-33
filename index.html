@@ -53,7 +53,7 @@
         </a>
         <div class="popover popover-search js-popover-closed">
           <label class="glaccy-search">
-            <input class="text-field" type="text" placeholder="Поиск по сайту">
+            <input class="text-field" type="text" placeholder="Поиск по сайту" required>
           </label>
           <button class="delete-cross-button">
             <svg role="img" aria-label="Закрыть" width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -72,10 +72,10 @@
           <h2>Личный кабинет</h2>
           <form class="popover-log-in-form" action="https://echo.htmlacademy.ru/" method="post">
             <label class="glaccy-log-in">
-              <input class="text-field" type="email" name="client-email" placeholder="email@example.com">
+              <input class="text-field" type="email" name="client-email" placeholder="email@example.com" required>
             </label>
             <label class="glaccy-log-in">
-              <input class="text-field" type="password" name="client-password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;">
+              <input class="text-field" type="password" name="client-password" placeholder="&#8226;&#8226;&#8226;&#8226;&#8226;&#8226;" required>
             </label>
             <div class="log-in-button-wrapper">
               <button type="button" class="button form-button">Войти</button>
@@ -347,7 +347,7 @@
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label for="subscription-email" class="visually-hidden"></label>
           <input class="text-field" type="email" id="subscription-email" name="client-email"
-                 placeholder="email@example.com">
+                 placeholder="email@example.com" required>
           <button class="button form-button" type="submit">Отправить</button>
         </form>
       </div>
@@ -376,11 +376,11 @@
               <span class="tooltip-content" role="tooltip" id="tooltip-label-1">Укажите желаемую дату и мы свяжемся с вами для подтверждения заказа</span>
             </span>
           </span>
-          <input class="text-field" type="text" id="date" name="date-of-delivery" placeholder="01.04.2020">
+          <input class="text-field" type="text" id="date" name="date-of-delivery" placeholder="01.04.2020" required>
         </p>
         <p class="form-field">
           <label class="form-label" for="number">Телефон</label>
-          <input class="text-field" type="tel" id="number" name="number" placeholder="+7 800 999-00-00">
+          <input class="text-field" type="tel" id="number" name="number" placeholder="+7 800 999-00-00" required>
         </p>
         <p class="form-field address-field">
           <span class="form-label">
@@ -397,7 +397,7 @@
                     id="tooltip-label-2">Введите название улицы, дома и квартиры</span>
             </span>
           </span>
-          <input class="text-field" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8">
+          <input class="text-field" type="text" id="address" name="address" placeholder="ул. Большая Конюшенная, 19/8" required>
         </p>
         <button class="button form-button" type="submit">Отправить</button>
       </form>
@@ -476,9 +476,9 @@
     <h2>Мы обязательно ответим вам!</h2>
     <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
       <label for="modal-name" class="visually-hidden"></label>
-      <input id="modal-name" class="text-field" type="text" name="client-name" placeholder="Имя и фамилия">
+      <input id="modal-name" class="text-field" type="text" name="client-name" placeholder="Имя и фамилия" required>
       <label for="modal-email" class="visually-hidden"></label>
-      <input id="modal-email" class="text-field" type="email" name="client-email" placeholder="email@example.com">
+      <input id="modal-email" class="text-field" type="email" name="client-email" placeholder="email@example.com" required>
       <label for="modal-text" class="visually-hidden"></label>
       <textarea id="modal-text" rows="6" class="text-field" name="client-feedback" placeholder="В свободной форме"></textarea>
       <button class="button form-button">Отправить</button>
