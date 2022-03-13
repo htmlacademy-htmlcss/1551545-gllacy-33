@@ -1247,7 +1247,8 @@ img {
   margin: 0;
 }
 
-.text-field:hover {
+.text-field:hover,
+.text-field:active {
   border-color: #2D3440;
 }
 
@@ -1257,17 +1258,15 @@ img {
   padding: 13px 16px;
 }
 
-.text-field:invalid,
-.text-field.error{
-  border-color: #EA5454;
-}
-
-.text-field:invalid:focus {
-  box-shadow: 0 0 0 1px #EA5454;
-}
-
-.text-field:hover:invalid,
+.text-field:focus:invalid,
 .text-field.error:focus {
+  border-color: #EA5454;
+  box-shadow: none;
+  color: #2D3440;
+}
+
+.text-field:hover:focus:invalid,
+.text-field.error:hover:focus {
   box-shadow: 0 0 0 1px #EA5454;
 }
 
@@ -1287,7 +1286,9 @@ img {
   letter-spacing: 0.06em;
 }
 
-.text-field:hover::placeholder {
+.text-field:hover::placeholder,
+.text-field:focus::placeholder,
+.text-field:active::placeholder {
   color: #2D3440;
 }
 
